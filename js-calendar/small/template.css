@@ -1,0 +1,29 @@
+.calendar-cell{
+    border-radius: 25%!important;
+    height: 36px!important;
+    width:37px!important;
+    border-color:transparent;
+    padding-top: 5.25px;
+    color: #00bfff;
+    font-size: 1rem;
+}
+.calendar-cell.active{
+    border-color:#00bfff!important;
+    background-color: #00bfff!important;
+    color:white!important;
+}
+.calendar-cell.selected{
+    border-color:#00bfff!important;
+}
+.calendar-title-cel{
+    width:37px!important;
+    color:#00bfff;
+}
+.calendar-bg{
+    border-color:#00bfff;
+    width: 313px;
+    height: 43.65vh;
+}
+.calendar-title{
+    color:#00bfff;
+}

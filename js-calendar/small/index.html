@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="template.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1>mnbbmn</h1>
+    <div class="container-fluid justify-content-center">
+        <div class='row text-center justify-content-center'>
+            <div class='calendar-bg border border-1'>
+                <div class='h4 calendar-title mb-0 mt-2' style='white-space:pre;' id='calendar-label'></div>
+                <ul class='list-inline align mb-0'>
+                    <li class="list-inline-item calendar-title-cel me-0">日</li>
+                    <li class="list-inline-item calendar-title-cel me-0">一</li>
+                    <li class="list-inline-item calendar-title-cel me-0">二</li>
+                    <li class="list-inline-item calendar-title-cel me-0">三</li>
+                    <li class="list-inline-item calendar-title-cel me-0">四</li>
+                    <li class="list-inline-item calendar-title-cel me-0">五</li>
+                    <li class="list-inline-item calendar-title-cel me-0">六</li>
+                </ul>
+                <ul class='list-inline text-center calender-row' id='calendar-days'>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="0-index.js"></script>
+    <script>
+        cells=document.getElementsByClassName("calendar-cell");
+        for(let i=0;i<cells.length;i++){
+            cells[i].addEventListener('click',function(event){
+                clear_selction();
+                event.target.classList+=' selected';
+            })
+        }
+        function clear_selction(){
+            for(let i=0;i<cells.length;i++){
+                cells[i].classList.remove('selected');
+            }
+        }
+    </script>
+</body>
+</html>
